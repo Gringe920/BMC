@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <router-view/>
-        <div v-if="showNav" class="bg navall" >
+        <div v-if="false" class="bg navall" >
             <router-link tag="a"   to="/home"   :class="($route.name=='empty'||$route.name=='home')?'nav-active':''">
                 <div class="thenav">
                     <img src="./assets/images/home_press@2x.png" alt="" srcset="" v-if="$route.name=='home'" >

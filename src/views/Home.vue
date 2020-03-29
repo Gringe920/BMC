@@ -2,7 +2,7 @@
     <div class="home">
         <Header :title="$t(`home.home`)"
                 :leftShow='false'
-                :rightEv='toacceptCoin' :rightIcon="require('../assets/images/add_scan_white@2x(2).png')" ></Header>
+                 ></Header>
 
         <section class="banner">
             <div class="swiper-container">
@@ -24,83 +24,49 @@
             <div class="advert_r" @click="toRoute('advert')">{{$t(`home.home5`)}}</div>
         </div>
         <div class="fenlei">
-            <router-link tag="a"   to="/shoukuan">
-                <div class="thenav">
-                    <img src="../assets/images/receivables@2x.png" alt="" srcset=""  >
-                    <span class="nav-title">{{$t('adr1')}}</span>
-                </div>
-            </router-link>
-            <a tag="a" to="/dapp" @click="clickBinding">
-                <div class="thenav">
-                    <img src="../assets/images/activation@2x.png" alt="" srcset=""  >
-                    <span class="nav-title" >{{$t('adr2')}}</span>
-                </div>
-            </a>
-            <router-link tag="a" to="/zhuanqian">
-                <div class="thenav">
-                    <img src="../assets/images/transfer@2x.png" alt="" srcset="" >
-                    <span class="nav-title">{{$t('adr3')}}</span>
-                </div>
-            </router-link>
-            <!-- <a tag="a" to="/zhuanqian" @click="dispark">
-                <div class="thenav">
-                    <img src="../assets/images/trading_competition@2x.png" alt="" srcset="" >
-                    <span class="nav-title">{{$t('adr19')}}</span>
-                </div>
-            </a> -->
-        </div>
-        <div class="fenlei">
-            <a tag="a"   to="/invite" @click="dispark">
-                <div class="thenav">
-                    <img src="../assets/images/convolution@2x.png" alt="" srcset=""  >
-                    <span class="nav-title">{{$t('adr18')}}</span>
-                </div>
-            </a>
-            <!-- <router-link tag="a" to="/invite" >
-                <div class="thenav">
-                    <img src="../assets/images/my_share@2x.png" alt="" srcset=""  >
-                    <span class="nav-title" >{{$t('adr4')}}</span>
-                </div>
-            </router-link> -->
             <router-link tag="a" to="/digMine" >
                 <div class="thenav">
                     <img src="../assets/images/mining@2x.png" alt="" srcset=""  >
                     <span class="nav-title" >{{$t('adr5')}}</span>
                 </div>
             </router-link>
-            <router-link tag="a" to="/trade">
+            <router-link tag="a" to="/zhuanqian">
                 <div class="thenav">
-                    <img src="../assets/images/transaction@2x.png" alt="" srcset="" >
-                    <span class="nav-title">{{$t('adr6')}}</span>
+                    <img src="../assets/images/transfer@2x.png" alt="" srcset="" >
+                    <span class="nav-title">{{$t('adr3')}}</span>
+                </div>
+            </router-link>
+            <router-link tag="a"   to="/shoukuan">
+                <div class="thenav">
+                    <img src="../assets/images/transfer_record@2x.png" alt="" srcset=""  >
+                    <span class="nav-title">{{$t('lang182')}}</span>
+                </div>
+            </router-link>
+            <router-link tag="a"   to="/shoukuan">
+                <div class="thenav">
+                    <img src="../assets/images/receivables_qr@2x.png" alt="" srcset=""  >
+                    <span class="nav-title">{{$t('wallet.shoukuan1')}}</span>
                 </div>
             </router-link>
         </div>
-        <div class="coininfosbox">
+        
+        <!-- <div class="coininfosbox">
             <div class="itembox" v-for="item in mainMarket" :key="item.v" @click="clickTrade(item)">
                 <div class="text1">{{unitCoin(item.left.currency)}}/{{unitCoin(item.right.currency)}}</div>
                 <div class="text2 up">{{toFixedNumber(item.price, 4) || '-'}} {{unitCoin(item.right.currency)}}</div>
-                <!--<div class="text3" :class="item %2 == 0?'down':'up'">-%</div>-->
                 <div class="text4">≈ {{getCurrencyPrice(item)}} {{moneyUnit}}</div>
             </div>
             <div class="itembox" v-if="mainMarket.length <= 2" v-for="item in mainMarket" @click="clickTrade(item)">
                 <div class="text1">{{unitCoin(item.left.currency)}}/{{unitCoin(item.right.currency)}}</div>
                 <div class="text2 up">{{toFixedNumber(item.price, 4) || '-'}} {{unitCoin(item.right.currency)}}</div>
-                <!--<div class="text3" :class="item %2 == 0?'down':'up'">-%</div>-->
                 <div class="text4">≈ {{getCurrencyPrice(item)}} {{moneyUnit}}</div>
             </div>
             <div class="itembox" v-if="mainMarket.length <= 1" v-for="item in mainMarket" @click="clickTrade(item)">
                 <div class="text1">{{unitCoin(item.left.currency)}}/{{unitCoin(item.right.currency)}}</div>
                 <div class="text2 up">{{toFixedNumber(item.price, 4) || '-'}} {{unitCoin(item.right.currency)}}</div>
-                <!--<div class="text3" :class="item %2 == 0?'down':'up'">-%</div>-->
                 <div class="text4">≈ {{getCurrencyPrice(item)}} {{moneyUnit}}</div>
             </div>
-            <!--<div class="itembox" v-for="item in 7" :key="item">-->
-                <!--<div class="text1">ADR/ADS</div>-->
-                <!--<div class="text2 up">{{newPrice}} ADS</div>-->
-                <!--&lt;!&ndash;<div class="text3" :class="item %2 == 0?'down':'up'">-%</div>&ndash;&gt;-->
-                <!--<div class="text4">≈ {{(decimal(moneyConvert)).toFixed(2)}}&nbsp;{{moneyUnit}}</div>-->
-            <!--</div>-->
-        </div>
+        </div> -->
         <div class='earningstitle'>{{$t('adr7')}}</div>
         <section class="earnings">
             <h4>{{ !hidden? $t('adr8') : $t('lang26')}}</h4>
@@ -109,7 +75,7 @@
                 <p>≈ {{toFixedNumber(decimal.mul((balancesXRP.value || 0), moneyConvert), 2)}} {{moneyUnit}}</p>
             </div>
         </section>
-        <section class="markets">
+        <!-- <section class="markets">
             <div class="title">{{$t('adr9')}}</div>
             <ul class="market-menu">
                 <li @click="clickMarketMenu(0)" :class="{active : marketMenuActive == 0}"><span>{{$t('lang28')}}</span></li>
@@ -133,13 +99,23 @@
                 </div>
             </div>
             <empty v-if="marketList.length <= 0"></empty>
-        </section>
+        </section> -->
+        <!-- benifit -->
+        <div class="last-week-profit calc-power-group">
+            <div class="icon-subtitle">
+                <i class="icon"></i>
+                <span class="subtitle">{{$t('lang116')}}</span>
+            </div>
+            <div class="divider"></div>
+            <canvas class="chart-7Day"></canvas>
+        </div>
     </div>
 </template>
 
 <script>
     import Swiper from "swiper";
     import SwiperCss from "swiper/css/swiper.css";
+    import Chart from 'chart.js';
     // @ is an alias to /src
     export default {
         name: "home",
@@ -154,6 +130,10 @@
                 marketList : [],
                 market : {},
                 quoteCoin : '',
+                myBarChart : null,
+                item : [],
+                labels : [],
+                data : [],
             };
         },
         watch : {
@@ -172,13 +152,66 @@
                 this.coinListChange();
                 this.marketMenuChange();
             }
+            this.getData();
         },
         destroyed() {
             if(this.swiper){
                 this.swiper.destroy();
             }
+            if(this.myBarChart){
+                this.myBarChart.destroy();
+            }
         },
         methods: {
+            getData (){
+                this.axios({
+                    url : "/service/wk_info",
+                    params : {
+                        address : this.account.getAddress()
+                        // address : 'rx08'
+                    }
+                }).then(data => {
+                    console.log(data);
+                    this.item = data.data || [];
+                    this.labels = [];
+                    this.data = [];
+                    if(this.item._7day_total_profit){
+                        let _7day_total_profit = this.item._7day_total_profit || [];
+                        _7day_total_profit.forEach(item => {
+                            let t = (new Date(item.time));
+                            this.labels.push((t.getMonth() + 1) + '/' + t.getDate());
+                            this.data.push(item.profit);
+                        })
+                    }
+                    this.chart();
+                }).catch(e => {
+                    console.log(e.message);
+                    // this.chart();
+                })
+            },
+            chart (){
+                if(document.querySelector(".chart-7Day")){
+                    var ctx = document.querySelector(".chart-7Day").getContext('2d');
+                    this.myBarChart = new Chart(ctx, {
+                        type: 'line',
+                        data:  {
+                            labels: this.labels,
+                            datasets: [
+                                {
+                                    borderColor : "#00FF00",
+                                    backgroundColor : "#00FF00",
+                                    data: this.data,
+                                    fill: false,
+                                    borderWidth: 1,
+                                }
+                            ],
+                        },
+                        options: {
+                            legend : false,
+                        }
+                    });
+                }
+            },
             coinListChange (){
                 if(this.quote.main){
                     this.coinList = Object.keys(this.quote.main);
@@ -301,6 +334,11 @@
     }
 </style>
 <style lang="scss" scoped>
+    .chart-7Day{
+        height: 200px;
+        margin-top: 15px;
+        width: 100%;
+    }
     // xm start
     .market-menu{
         display: flex;
@@ -420,8 +458,9 @@
             background: $bg;
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            padding-bottom: 15px;
             justify-content: space-around;
+            border-bottom: 10px solid #F7F9FC;
             .thenav {
                 display: flex;
                 flex-direction: column;
@@ -478,7 +517,7 @@
             padding: 15px;
         }
         .earnings {
-            border-bottom: 10px solid $bg7;
+            
             display: block;
             margin: 0 15px;
             padding: 15px;
@@ -488,6 +527,7 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
             border-radius: 5px;
+            margin-bottom: 20px;
             h4 {
                 font-weight: normal;
                 font-size: 14px;
@@ -549,6 +589,67 @@
                         line-height: 35px;
                         text-align: center;
                     }
+                }
+            }
+        }
+    }
+    .last-week-profit {
+        position: relative;
+        padding: 0 15px;
+        .icon {
+            background-image: url("../assets/images/mining_profit@2x.png");
+        }
+        .subtitle{
+            font-size: 18px;
+        }
+        .profit-chart {
+            padding: 15px 0;
+
+            .pillar-group {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+
+                .pillar {
+                    height: 50px;
+                    width: 16px;
+                    border-radius: 100px 100px 0 0;
+                    background:linear-gradient(180deg,rgba(1,101,237,1) 0%,rgba(1,101,237,0) 100%);
+                }
+            }
+
+            .no-data {
+                padding: 47px 0;
+                text-align: center;
+                i.no-data-logo {
+                    margin: 0 auto;
+                    background-image: url("../assets/images/blank_page@2x.png");
+                    background-size: 100% 100%;
+                    display: inline-block;
+                    border: 1px dashed $color1;
+                    width: 80px;
+                    height: 80px;
+                }
+
+                .no-data-note {
+                    color: $color1;
+                    font-size: 12px;
+                }
+            }
+
+            .inside-chart {
+                margin: 0;
+            }
+
+            .date-group {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                .date {
+                    color: $color1;
+                    font-size: 10px;
+                    line-height: 10px;
+                    margin-top: 8px;
                 }
             }
         }

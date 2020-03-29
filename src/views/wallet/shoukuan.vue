@@ -113,7 +113,7 @@
         text-align: center;
         display: block;
         height:100%;
-        background: $blue;
+        background: linear-gradient(135deg,rgba(238,125,6,1) 0%,rgba(229,16,18,1) 100%);
         box-sizing: border-box;
         .content {
             margin: 50px auto 0 auto;
@@ -167,7 +167,6 @@
             margin: 40px 0 0;
             display: flex;
             justify-content: space-around;
-            background: $blue;
             .erbox {
                 color: $color6;
                 font-size: 14px;

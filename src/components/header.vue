@@ -5,7 +5,7 @@
         <span :style="`color:${titleColor}`">{{title}}</span>
         <span  @click="totextpath"  v-if="righttext" class="text_r" >{{righttext}}</span>
         <img @click="topath"  v-if="rightIcon" :src="rightIcon" alt="" class="icon-r">
-        <img v-if="$route.name == 'home'" src="../assets/images/ewm.png" alt="" @click="$router.push('/shoukuan/XRP')" class="icon-r ewm">
+        <!-- <img v-if="$route.name == 'home'" src="../assets/images/ewm.png" alt="" @click="$router.push('/shoukuan/XRP')" class="icon-r ewm"> -->
     </section>
 </template>
 <script>

@@ -379,10 +379,8 @@
                 bottom: 0;
                 background:$border2;
                 width: 100%;
-                .cg {
-                    color: $active !important;
-                    border-top: 10px solid $nav-bg;
-                }
+                border-radius:16px 16px 0px 0px;
+                
                 .coin {
                     width: 100%;
                     text-align: center;
@@ -391,7 +389,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-bottom: 1px solid $black;
+                    border-bottom: 1px solid #EEEDF0;
                     &.active {
                         color: $active;
                     }
@@ -403,6 +401,12 @@
                         margin-left: 6px;
                         display: inline-block;
                     }
+                }
+
+                .cg {
+                    color: $active !important;
+                    border-top: 10px solid #F7F9FC;
+                    border-bottom: 0;
                 }
             }
         }
